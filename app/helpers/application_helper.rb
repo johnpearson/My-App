@@ -1,7 +1,7 @@
 module ApplicationHelper
   # Sets base title
    def title
-     base_title = "John Pearson"
+     base_title = "The Road to Code"
      if @title.nil?
        base_title
      else

@@ -26,12 +26,15 @@ body {
 }
 
 /* Header Styling */
-.links tr {
-	border-top: black solid;
-	border-bottom: black solid;
+.top_table {
+	background: black;
+}
+.links {
+	border-top: white solid;
+	border-bottom: white solid;
 }
 .links tr td {
-	padding: 20px;
+	padding: 19.7px;
 }
 
 /* Sidebar Styling */
