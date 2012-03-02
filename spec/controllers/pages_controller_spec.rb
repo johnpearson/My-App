@@ -14,7 +14,7 @@ describe PagesController do
     end
     
     it "should have the right title" do
-      response.should have_selector("title", :content => "John Pearson - homebase")
+      response.should have_selector("title", :content => "The Road to Code - homebase")
     end
     
     it "should have sidebar image" do
@@ -22,11 +22,12 @@ describe PagesController do
     end
     
     it "should have the link images" do
-      response.should have_selector("a", :href => blog_path)
+      response.should have_selector("a", :href => root_path)
       response.should have_selector("a", :href => about_path)
-      response.should have_selector("a", :href => info_path)
+      response.should have_selector("a", :href => contact_path)
+      response.should have_selector("a", :href => links_path)
       response.should have_selector("a", :href => thoughts_path)
-      response.should have_selector("a", :href => resume_path)
+      response.should have_selector("a", :href => websites_path)
     end
   end
   
@@ -41,14 +42,14 @@ describe PagesController do
     end
     
     it "should have the right title" do
-      response.should have_selector("title", :content => "John Pearson - about")
+      response.should have_selector("title", :content => "The Road to Code - about")
     end
   end
   
-  describe "GET 'info' page" do
+  describe "GET 'links' page" do
     
     before(:each) do
-      get :info
+      get :links
     end
     
     it "should be successful" do
@@ -56,7 +57,7 @@ describe PagesController do
     end
     
     it "should have the right title" do
-      response.should have_selector("title", :content => "John Pearson - info")
+      response.should have_selector("title", :content => "The Road to Code - links")
     end
   end
   
@@ -71,14 +72,14 @@ describe PagesController do
     end
     
     it "should have the right title" do
-      response.should have_selector("title", :content => "John Pearson - thoughts")
+      response.should have_selector("title", :content => "The Road to Code - thoughts")
     end
   end
   
-  describe "GET 'resume' page" do
+  describe "GET 'websites' page" do
     
     before(:each) do
-      get :resume
+      get :websites
     end
     
     it "should be successful" do
@@ -86,7 +87,7 @@ describe PagesController do
     end
     
     it "should have the right title" do
-      response.should have_selector("title", :content => "John Pearson - resume")
+      response.should have_selector("title", :content => "The Road to Code - websites")
     end
   end
 end

@@ -9,7 +9,11 @@
 <body>
 	<div class="container">
 		<%= render "shared/header" %>
-		<%= yield %>
+		<div id="main">
+			<%= yield %>
+		</div>
+		<%= render "shared/sidebar" %>
 	</div>
+	<%= render "shared/footer" %>
 </body>
 </html>

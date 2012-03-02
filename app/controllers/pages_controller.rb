@@ -8,15 +8,15 @@ class PagesController < ApplicationController
     @title = "about"
   end
   
-  def info
-    @title = "info"
+  def links
+    @title = "links"
   end
   
   def thoughts
     @title = "thoughts"
   end
   
-  def resume
-    @title = "resume"
+  def websites
+    @title = "websites"
   end
 end
